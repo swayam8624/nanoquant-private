@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nanoquant-api
+  labels:
+    app: nanoquant
+    component: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nanoquant
+      component: api
+  template:
+    metadata:
+      labels:
+        app: nanoquant
+        component: api
+    spec:
+      containers:
+        - name: nanoquant-api
+          image: nanoquant/api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: PYTHONPATH
+              value: /app
+            - name: HF_HOME
+              value: /root/.cache/huggingface
+          volumeMounts:
+            - name: models-volume
+              mountPath: /home/nanoquant/models
+            - name: output-volume
+              mountPath: /home/nanoquant/output
+            - name: cache-volume
+              mountPath: /root/.cache/huggingface
+          resources:
+            requests:
+              memory: "2Gi"
+              cpu: "1"
+            limits:
+              memory: "8Gi"
+              cpu: "4"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 60
+            periodSeconds: 30
+      volumes:
+        - name: models-volume
+          persistentVolumeClaim:
+            claimName: nanoquant-models-pvc
+        - name: output-volume
+          persistentVolumeClaim:
+            claimName: nanoquant-output-pvc
+        - name: cache-volume
+          persistentVolumeClaim:
+            claimName: nanoquant-cache-pvc

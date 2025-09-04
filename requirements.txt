@@ -1,0 +1,50 @@
+# Core dependencies
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.10.0
+peft>=0.4.0
+accelerate>=0.20.0
+bitsandbytes>=0.40.0
+numpy>=1.24.0
+scipy>=1.7.0
+scikit-learn>=1.0.0
+
+# Web framework
+fastapi>=0.100.0
+uvicorn>=0.23.0
+python-multipart>=0.0.5
+
+# Frontend
+streamlit>=1.0.0
+
+# CLI
+typer>=0.9.0
+
+# Utilities
+pydantic>=1.8.0
+requests>=2.25.0
+docker>=5.0.0
+ollama>=0.1.0
+
+# For advanced compression techniques
+huggingface-hub>=0.16.0
+tokenizers>=0.12.0
+sentencepiece>=0.1.96
+
+# Logging
+loguru>=0.5.0
+
+# For development
+pytest>=6.0.0
+black>=21.0.0
+flake8>=3.8.0
+
+# Cloud integration
+boto3>=1.26.0
+stripe>=5.0.0
+razorpay>=1.3.0
+paypalrestsdk>=1.13.1
+
+# Desktop application building
+pyinstaller>=5.0.0
+cx_Freeze>=6.10.0

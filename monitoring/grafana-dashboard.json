@@ -1,0 +1,129 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "NanoQuant Monitoring",
+    "tags": ["nanoquant"],
+    "timezone": "browser",
+    "schemaVersion": 16,
+    "version": 0,
+    "refresh": "25s",
+    "rows": [
+      {
+        "title": "System Overview",
+        "height": "250px",
+        "panels": [
+          {
+            "id": 1,
+            "title": "CPU Usage",
+            "type": "graph",
+            "span": 4,
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "rate(node_cpu_seconds_total{mode!='idle'}[1m])",
+                "legendFormat": "{{instance}} {{mode}}",
+                "refId": "A"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Memory Usage",
+            "type": "graph",
+            "span": 4,
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes",
+                "legendFormat": "{{instance}}",
+                "refId": "A"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Disk Usage",
+            "type": "graph",
+            "span": 4,
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "node_filesystem_avail_bytes / node_filesystem_size_bytes",
+                "legendFormat": "{{instance}} {{mountpoint}}",
+                "refId": "A"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "NanoQuant API Metrics",
+        "height": "250px",
+        "panels": [
+          {
+            "id": 4,
+            "title": "API Request Rate",
+            "type": "graph",
+            "span": 6,
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "rate(http_requests_total[1m])",
+                "legendFormat": "{{method}} {{endpoint}}",
+                "refId": "A"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "API Response Time",
+            "type": "graph",
+            "span": 6,
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[1m])) by (le))",
+                "legendFormat": "95th percentile",
+                "refId": "A"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Model Compression Metrics",
+        "height": "250px",
+        "panels": [
+          {
+            "id": 6,
+            "title": "Compression Jobs",
+            "type": "graph",
+            "span": 6,
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "nanoquant_compression_jobs_total",
+                "legendFormat": "{{status}}",
+                "refId": "A"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "title": "Average Compression Time",
+            "type": "graph",
+            "span": 6,
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "nanoquant_compression_time_seconds_avg",
+                "legendFormat": "average",
+                "refId": "A"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

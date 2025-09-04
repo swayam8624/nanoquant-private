@@ -1,0 +1,98 @@
+{
+  "users": {
+    "3cd2951d34ef9fc41abe2c10078cf21f": {
+      "email": "test@example.com",
+      "password_hash": "b55c8792d1ce458e279308835f8a97b580263503e76e1998e279703e35ad0c2e",
+      "social_id": null,
+      "credits": 100,
+      "tier": "free",
+      "created_at": "2025-08-31T02:07:00.205653",
+      "compression_history": [],
+      "last_login": "2025-08-31T02:07:00.205880"
+    },
+    "ba96d37adab6246062e0f6a0acfc4b3d": {
+      "email": "test_user@nanoquant.com",
+      "password_hash": "67dafc9ecaa7d08d35bc0ab67dde6ac29aec6faf70c17266be868f097d262dc1",
+      "social_id": null,
+      "credits": 90,
+      "tier": "free",
+      "created_at": "2025-09-03T00:36:18.077781",
+      "compression_history": [],
+      "last_login": "2025-09-03T00:36:19.317572",
+      "user_id": "ba96d37adab6246062e0f6a0acfc4b3d",
+      "credit_log": [
+        {
+          "amount": -10,
+          "reason": "test_compression",
+          "timestamp": "2025-09-03T00:36:19.318080"
+        }
+      ]
+    },
+    "da75b9be8ea84c4dce4c756a9cdd3ff9": {
+      "email": "limited@test.com",
+      "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "social_id": null,
+      "credits": 5,
+      "tier": "free",
+      "created_at": "2025-09-03T00:37:57.375563",
+      "compression_history": [],
+      "last_login": "2025-09-03T00:37:57.375875",
+      "user_id": "da75b9be8ea84c4dce4c756a9cdd3ff9"
+    },
+    "689c59d33485d63af3b699d594205a9d": {
+      "email": "debug@test.com",
+      "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "social_id": null,
+      "credits": 5,
+      "tier": "free",
+      "created_at": "2025-09-03T00:48:02.887095",
+      "compression_history": [],
+      "last_login": "2025-09-03T00:48:02.887404",
+      "user_id": "689c59d33485d63af3b699d594205a9d"
+    },
+    "54ea84738525f1d0c0b443cd15886078": {
+      "email": "trials@test.com",
+      "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "social_id": null,
+      "credits": 0,
+      "tier": "free",
+      "created_at": "2025-09-03T00:48:04.052547",
+      "compression_history": [],
+      "last_login": "2025-09-03T00:48:04.052562",
+      "user_id": "54ea84738525f1d0c0b443cd15886078"
+    },
+    "2e4ae38e51bc26f8e41a8a619b9229ed": {
+      "email": "poor@test.com",
+      "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "social_id": null,
+      "credits": 5,
+      "tier": "free",
+      "created_at": "2025-09-03T00:50:43.698035",
+      "compression_history": [],
+      "last_login": "2025-09-03T00:50:43.698215",
+      "user_id": "2e4ae38e51bc26f8e41a8a619b9229ed"
+    },
+    "0ae03cb078f27eafef0977cde5460946": {
+      "email": "rich@test.com",
+      "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "social_id": null,
+      "credits": 500,
+      "tier": "premium",
+      "created_at": "2025-09-03T00:50:44.711628",
+      "compression_history": [],
+      "last_login": "2025-09-03T00:50:44.711662",
+      "user_id": "0ae03cb078f27eafef0977cde5460946"
+    },
+    "a73a2a6d2d74e6e85d20550e2173f08e": {
+      "email": "integration_test@example.com",
+      "password_hash": "67dafc9ecaa7d08d35bc0ab67dde6ac29aec6faf70c17266be868f097d262dc1",
+      "social_id": null,
+      "credits": 100,
+      "tier": "free",
+      "created_at": "2025-09-04T15:37:44.886955",
+      "compression_history": [],
+      "last_login": "2025-09-04T15:37:44.888512"
+    }
+  },
+  "coupons": {}
+}

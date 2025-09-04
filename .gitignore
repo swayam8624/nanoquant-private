@@ -1,0 +1,69 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+
+# --- Virtual Envs ---
+.env
+.venv
+env/
+venv/
+ENV/
+Pipfile.lock
+poetry.lock
+
+# --- Build / Dist ---
+build/
+dist/
+*.spec
+
+# --- Jupyter / Notebooks ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- Logs & Dumps ---
+*.log
+*.out
+*.err
+*.gz
+*.zip
+*.tar
+*.tar.gz
+
+# --- Test / Coverage ---
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.coverage
+coverage.xml
+*.cover
+*.lcov
+
+# --- Models & Large Files ---
+*.pt
+*.bin
+*.safetensors
+*.h5
+*.ckpt
+*.onnx
+*.pb
+*.tflite
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,68 @@
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setup(
+    name="nanoquant",
+    version="1.0.0",
+    author="NanoQuant Team",
+    author_email="team@nanoquant.ai",
+    description="A production-grade system for extreme LLM compression",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/nanoquant/nanoquant",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    ],
+    python_requires=">=3.8",
+    install_requires=[
+        "torch>=2.0.0",
+        "transformers>=4.30.0",
+        "datasets>=2.10.0",
+        "peft>=0.4.0",
+        "accelerate>=0.20.0",
+        "bitsandbytes>=0.40.0",
+        "numpy>=1.21.0",
+        "scipy>=1.7.0",
+        "scikit-learn>=1.0.0",
+        "fastapi>=0.68.0",
+        "uvicorn>=0.15.0",
+        "python-multipart>=0.0.5",
+        "streamlit>=1.0.0",
+        "typer>=0.4.0",
+        "pydantic>=1.8.0",
+        "requests>=2.25.0",
+        "docker>=5.0.0",
+        "ollama>=0.1.0",
+        "huggingface-hub>=0.10.0",
+        "tokenizers>=0.12.0",
+        "sentencepiece>=0.1.96",
+        "loguru>=0.5.0",
+        "rich>=10.0.0",
+        "boto3>=1.26.0",
+        "stripe>=5.0.0",
+        "razorpay>=1.3.0",
+    ],
+    entry_points={
+        "console_scripts": [
+            "nanoquant=nanoquant.cli.main:app",
+            "nanoquant-desktop=nanoquant.main:main",
+            "nanoquant-admin=nanoquant_admin:app",
+        ],
+    },
+    include_package_data=True,
+    package_data={
+        "nanoquant": ["web/*.py", "api/*.py", "cli/*.py", "core/*.py", "main.py"],
+    },
+)
